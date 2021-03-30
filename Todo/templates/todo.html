@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Get ToDo's -->
+    {% for t in All_todos%}
+        <h1>{{ t.name}}</h1>
+        <p>{{t.description}}</p>
+    {% endfor %}
+
+    <!-- Get A ToDo -->
+    {% if a_todo %}
+        <span>ToDo No => {{a_todo.id}}</span>
+        <h3>{{a_todo.name}}</h3>
+        <p>{{a_todo.description}}</p>
+    {% endif %}
+</body>
+</html>
